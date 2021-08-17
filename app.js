@@ -1,7 +1,7 @@
 const express = require("express");
 const Controller = require("./controller/controller");
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 const auth = require("./middleware/authentication");
 
 app.use(express.urlencoded({ extended: false }));
